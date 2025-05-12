@@ -1,10 +1,7 @@
 # PHÂN CẤP OWNER WORKSPACE AND SYSTEM + CÂU HỎI
 
 ## BỘ CÂU TRẢ LỜI NHÓM 4
-### **Câu 12: **Khi người dùng thay đổi deadline của task, hệ thống có gửi thông báo đến những người liên quan không? Nếu không, làm sao họ biết có sự thay đổi quan trọng?
-- Mình xin trả lời câu hỏi của bạn ABCXYZ....: ==> Hiện tại, khi người dùng thay đổi deadline của một task, hệ thống chưa có cơ chế gửi thông báo tự động, cũng như chức thông báo đến những người liên quan. Để đảm bảo mọi thành viên nắm bắt kịp thời các thay đổi quan trọng như deadline của **task**, nhóm mình ta đang tạm thời tận dụng các nền tảng nhắn tin “hot” và phổ biến như **Messenger, Zalo** để gửi thông báo thủ công đến người liên quan đến **task** đó.
-- Và mình xin cảm ơn nhóm bạn đã đặt câu hỏi, giúp nhóm mình nhận ra thiếu một chức năng không kém quan trọng của hệ thống. Và trong giai đoạn tiếp theo, nhóm sẽ bổ sung cơ chế thông báo tự động ngay trong hệ thống, cho phép:
-    - Gửi email hoặc push chức năng thông báo (notification đến tất cả thành viên liên quan khi có thay đổi deadline.
+
 ---
 
 ### **Câu 1:** Nhóm đã xác định rõ luồng chuyển trạng thái của **task** chưa? Ví dụ: task đang "Đang làm" có thể chuyển thẳng sang "Hoàn thành" hay phải qua bước "Kiểm tra"? Nếu chưa có quy tắc cụ thể thì nhóm có cảm thấy logic hệ thống có hơi lỏng lẻo không?
@@ -12,9 +9,9 @@ Mình xin trả lời câu hỏi của bạn ABCXYZ....:
 
 1. **Thứ nhất:** Nhóm đã xác định rõ luồng chuyển trạng thái của task chưa?
     1. Nhóm mình đã xác định luồng chuyển trạng thái là: 
-        1. **BACKLOG: **Những ý tưởng, yêu cầu thu thập ban đầu, chưa được lên kế hoạch cụ thể.
+        1. **BACKLOG**: Những ý tưởng, yêu cầu thu thập ban đầu, chưa được lên kế hoạch cụ thể.
         2. **TO DO:** Task đã được cân nhắc ưu tiên và lên kế hoạch, sẵn sàng để ai đó nhận làm.
-        3. **IN PROGRESS: **Thành viên đã nhận task và đang thực hiện.
+        3. **IN PROGRESS**: Thành viên đã nhận task và đang thực hiện.
         4. **IN REVIEW:** Khi hoàn thành công việc, bạn có thể đính kèm tài liệu hoặc hướng dẫn chi tiết vào mục Description để QA/Leader kiểm tra.
         5. **DONE:** Sẽ có 2 trường hợp:
             1. Trường hợp 1: Nếu phát hiện lỗi hoặc phát sinh yêu cầu thay đổi, task sẽ được mở lại để xử lý tiếp.
@@ -49,11 +46,11 @@ Mình xin trả lời câu hỏi của bạn ABCXYZ....:
 ### **Câu 3: **Khi task bị quá hạn, hệ thống có tự động gửi thông báo cho người được giao hoặc quản lý không? Nếu không có, thì làm sao để người dùng biết task bị trễ?
 Mình xin trả lời câu hỏi của bạn ABCXYZ....: 
 
-1. **Thứ nhất: **Hiện tại nhóm mình chưa có thông báo tự động:
+1. **Thứ nhất** Hiện tại nhóm mình chưa có thông báo tự động:
     1. Hệ thống chưa gửi email hay có chức năng thông báo (notification) khi deadline đã qua.
-2. **Thứ hai: **Phần mềm có cơ chế trực quan ngay trên giao diện:
+2. **Thứ hai** Phần mềm có cơ chế trực quan ngay trên giao diện:
     1. **Màu sắc trạng thái:**
-        1. **Màu trắng: **Còn nhiều thời gian (lớn hơn 15 ngày).
+        1. **Màu trắng**: Còn nhiều thời gian (lớn hơn 15 ngày).
         2. **Màu vàng**: Còn khá nhiều thời gian (trong khoảng 8 đến 14 ngày).
         3. **Màu cam**: Sắp hết hạn (trong khoảng 4 đến 7 ngày).
         4. **Đỏ**: Sắp quá hạn (dưới 3 ngày).
@@ -65,17 +62,17 @@ if (diffInDays <= 3) {
 } else if (diffInDays <= 14) {
     textColor = 'text-yellow-500';
 }` 
-3. **Thứ ba: **Bộ lọc & tìm kiếm chuyên biệt:
+3. **Thứ ba**: Bộ lọc & tìm kiếm chuyên biệt:
     1. Thêm bộ lọc tìm kiếm **“Overdue”** để nhanh chóng liệt kê các task quá hạn.
     2. Cho phép lọc theo người được giao, giúp cá nhân đối chiếu xem có task nào đang trễ không.
-4. **Thứ tư: **Analytics Dashboard cho toàn bộ người dùng:
+4. **Thứ tư**: Analytics Dashboard cho toàn bộ người dùng:
     1. Tổng hợp số lượng task quá hạn.
     2. Biểu đồ xu hướng (trend) số task quá hạn theo project.
     3. Admin/leader có thể dùng bộ lọc tìm kiếm trên dashboard để “truy vết” các trường hợp trễ và xử lý phù hợp theo các điều luật của công ty cũng như các nhóm học tập.
-5. **Thứ năm: **Giải pháp cho trường hợp trên:
+5. **Thứ năm**: Giải pháp cho trường hợp trên:
     1. Tuy đã có bộ lọc tìm kiếm cũng như chức năng phân tích trực quan để truy vết, nhưng nhóm mình cũng sẽ thêm chức năng thông báo như:
         1. **Thông báo Email:** khi task sắp đến hạn (ví dụ 24 giờ trước deadline).
-        2. **Chức năng thông báo: **Cho các thành viên cũng như Admin, không ai bị bỏ sót thông tin.
+        2. **Chức năng thông báo**: Cho các thành viên cũng như Admin, không ai bị bỏ sót thông tin.
 ---
 
 ### **Câu 4: **Hiện tại mỗi task chỉ có thể giao cho một người. Nhóm có xem xét trường hợp nhiều người cùng thực hiện một task chưa? Nếu không, hệ thống xử lý thế nào với công việc có tính chất làm việc theo nhóm?
@@ -90,7 +87,7 @@ Mình xin trả lời câu hỏi của bạn ABCXYZ....:
         - Phải quản lý nhiều sub-task, dễ bị rời rạc.
         - Dễ bị bỏ sót ai đóng góp chung mà không "chính danh" được công nhận.
         - Khó tổng kết tiến độ toàn bộ nhóm trên cùng một task.
-2. **Thứ hai: **Giải pháp khắc phục hiện trạng:
+2. **Thứ hai**:Giải pháp khắc phục hiện trạng:
     1. **Giải pháp thứ nhất:**
         - Thêm chức năng gán được nhiều assignee (người được giao nhiệm vụ).
         - Hiển thị avatar của tất cả người được gán ngay trên card/task.
@@ -246,5 +243,9 @@ description: // Lý do thay đổi (được điền bởi admin khi sửa task)
         - Và lúc này chỉ có duy nhất member - admin - owner yều cầu mới chỉnh được task trên. Và sau khi chỉnh link file hay 1 số thông tin như bảng cơ sở dữ liệu cấp -> thì nhấn lưu lại.
         - Sau đó member gửi thông báo sửa xong.
         - Admin nhận thông báo và đến task kiểm tra và cập nhật task DONE lại cho Member.
-
+---
+### **Câu 12: **Khi người dùng thay đổi deadline của task, hệ thống có gửi thông báo đến những người liên quan không? Nếu không, làm sao họ biết có sự thay đổi quan trọng?
+- Mình xin trả lời câu hỏi của bạn ABCXYZ....: ==> Hiện tại, khi người dùng thay đổi deadline của một task, hệ thống chưa có cơ chế gửi thông báo tự động, cũng như chức thông báo đến những người liên quan. Để đảm bảo mọi thành viên nắm bắt kịp thời các thay đổi quan trọng như deadline của **task**, nhóm mình ta đang tạm thời tận dụng các nền tảng nhắn tin “hot” và phổ biến như **Messenger, Zalo** để gửi thông báo thủ công đến người liên quan đến **task** đó.
+- Và mình xin cảm ơn nhóm bạn đã đặt câu hỏi, giúp nhóm mình nhận ra thiếu một chức năng không kém quan trọng của hệ thống. Và trong giai đoạn tiếp theo, nhóm sẽ bổ sung cơ chế thông báo tự động ngay trong hệ thống, cho phép:
+    - Gửi email hoặc push chức năng thông báo (notification đến tất cả thành viên liên quan khi có thay đổi deadline.
 
